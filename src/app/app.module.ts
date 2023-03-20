@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AllUsersComponent } from './all-users/all-users.component';
+import { StockFormComponent } from './stock-form/stock-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AllUsersComponent } from './all-users/all-users.component';
     LoginFormComponent,
     HomeComponent,
     AllUsersComponent,
+    StockFormComponent,
   ],
   imports: [
     BrowserModule,

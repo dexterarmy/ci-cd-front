@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -22,7 +28,7 @@ body{
      line-height: 1.9;
      height: 100%;
      overflow-x: hidden;
-     background-color: var(--black);
+     background-color: var(--white);
      color: var(--white);
 }
 

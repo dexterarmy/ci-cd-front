@@ -15,7 +15,7 @@
         <div *ngIf="loginForm.get('password')?.errors?.required">Password is required.</div>
       </div>
     </div>
-    <button type="submit"  [disabled]="loginForm.invalid" [ngStyle]="{'background-color': loginForm.valid ? 'green' : 'gray'}">Login</button>
+    <button type="submit" [disabled]="loginForm.invalid" [ngStyle]="{'background-color': loginForm.valid ? 'green' : 'gray'}">Login</button>
     <!-- <button type="submit">Login</button> -->
   </form>
 </div>
