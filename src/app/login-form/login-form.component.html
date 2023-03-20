@@ -1,0 +1,24 @@
+<div class="login-form">
+ <div *ngIf="noUser">
+   <p>{{noUser}}</p>
+ </div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+    <div>
+      <input type="text" formControlName="name" placeholder="name">
+      <div *ngIf="loginForm.get('name')?.invalid && (loginForm.get('name')?.dirty || loginForm.get('name')?.touched)">
+        <div *ngIf="loginForm.get('name')?.errors?.required">Email is required.</div>
+      </div>
+    </div>
+    <div>
+      <input type="password" formControlName="password" placeholder="password">
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+        <div *ngIf="loginForm.get('password')?.errors?.required">Password is required.</div>
+      </div>
+    </div>
+    <button type="submit"  [disabled]="loginForm.invalid" [ngStyle]="{'background-color': loginForm.valid ? 'green' : 'gray'}">Login</button>
+    <!-- <button type="submit">Login</button> -->
+  </form>
+</div>
+
+
+

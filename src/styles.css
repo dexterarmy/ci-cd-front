@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --black: #000;
+    --blackLite: #0c0c0c;
+    --white: #fff;
+    --correct: #17b44b;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+     font-weight: 300;
+     line-height: 1.9;
+     height: 100%;
+     overflow-x: hidden;
+     background-color: var(--black);
+     color: var(--white);
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+ul{
+    list-style: none;
+}

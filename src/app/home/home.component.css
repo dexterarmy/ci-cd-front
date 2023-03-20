@@ -1,0 +1,13 @@
+.user-detail{
+    font-size: medium;
+    font-weight: 300;
+    width: 50%;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.user-detail span{
+    font-size: larger;
+    font-weight: 400;
+    color: chartreuse;
+}
