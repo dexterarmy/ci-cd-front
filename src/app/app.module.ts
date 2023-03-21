@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { StockFormComponent } from './stock-form/stock-form.component';
+import { StockTableComponent } from './stock-table/stock-table.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { StockFormComponent } from './stock-form/stock-form.component';
     HomeComponent,
     AllUsersComponent,
     StockFormComponent,
+    StockTableComponent,
   ],
   imports: [
     BrowserModule,

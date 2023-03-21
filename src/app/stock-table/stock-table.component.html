@@ -1,0 +1,62 @@
+<div class="stock-table relative overflow-x-auto shadow-md p-8">
+    <h1 class="underline text-center">Today's Order List</h1>
+    <div class="flex items-center justify-between pb-4">
+        <div class="stock-entries ">
+           
+            <select id="entry-type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5   ">
+                <option selected>Last 10 entries</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+            </select> 
+        </div>
+        <div class="stock-search">
+            <input type="text" id="entry-price" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="Search">
+        </div>
+    </div>
+    <table class=" w-full text-sm text-center text-gray-500" >
+        <thead class="text-sm text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th>Stock</th>
+                <th>Entry</th>
+                <th>Target</th>
+                <th>Stop Loss</th>
+                <th>Qty</th>
+                <th>Type</th>
+                <th>Tag</th>
+                <th>Created At</th>
+                <th>Status</th>
+                <th>Modify</th>
+            </tr>
+        </thead>
+        <!-- <tbody *ngIf="data; "> -->
+        <tbody>
+            <tr class=" w-full bg-white border-b" >
+                <td class="pr-6 py-4  "> NSE </td>
+                <td class="pr-6 py-4"> 11 </td>
+                <td class="pr-6 py-4"> 12 </td>
+                <td class="pr-6 py-4"> 12 </td>
+                <td class="pr-6 py-4"> 1 </td>
+                <td class="pr-6 py-4"> high </td>
+                <td class="pr-6 py-4"> 10 </td>
+                <td class="pr-6 py-4"> 10 </td>
+                <td class="pr-6 py-4"> sold </td>
+                <td class="pr-6 py-4"> no </td>
+            </tr>
+        </tbody>
+        <!-- <ng-template #noData  >
+            <p class="no-data text-center ">
+                No data available in table
+            </p>
+        </ng-template> -->
+        
+    </table>
+    <div class="flex items-center justify-between pt-4">
+        <span class="text-sm font-normal text-gray-500">Showing <span class="font-semibold text-gray-900">1-10 <span class="text-sm font-normal text-gray-500">of <span class="font-semibold text-gray-900">1000 <span class="text-sm font-normal text-gray-500">Entries</span></span></span></span></span>
+        <div class=" inline-flex items-center">
+            <button type="button" class="text-black bg-white-500 border-2  focus:bg-red-300   font-medium rounded-lg text-base p-1.5 px-4 text-center ">Previous</button>
+            <button type="button" class="text-black bg-white-500 border-2  focus:bg-red-300   font-medium rounded-lg text-base p-1.5 px-4 text-center ">Next</button>
+        </div>
+    </div>
+</div>
