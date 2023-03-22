@@ -6,8 +6,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { StockFormComponent } from './stock-form/stock-form.component';
 
 const routes: Routes = [
-  {path:"", redirectTo: "stock", pathMatch: "full"},
-  // {path: "login", component: LoginFormComponent},
+  {path:"", redirectTo: "login", pathMatch: "full"},
+  {path: "login", component: LoginFormComponent},
   {path: "stock", component: StockFormComponent},
   {path: "home", component: HomeComponent},
   {path: "all-users", component: AllUsersComponent},
