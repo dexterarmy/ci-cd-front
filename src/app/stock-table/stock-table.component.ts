@@ -1,5 +1,6 @@
 import { Component, OnInit, Input , EventEmitter} from '@angular/core';
 import { StockServiceService } from '../services/stock-service/stock-service.service';
+import { Socket } from 'ngx-socket-io';
 
 interface stockObject{
   stock: string,
@@ -23,8 +24,18 @@ export class StockTableComponent implements OnInit {
   @Input() myEvent : EventEmitter<any>;
 
   data:Array<stockObject>;
+  changingData:number;
 
-  constructor(private stockService: StockServiceService){}
+  constructor(private stockService: StockServiceService, private socket: Socket){
+    this.socket.on('changingData', (data: number) => {
+      console.log(data);
+      this.changingData = data;
+    });
+
+    window.addEventListener('beforeunload', () => {
+      this.socket.disconnect();
+    });
+  }
   ngOnInit(): void {
 
     this.stockData();

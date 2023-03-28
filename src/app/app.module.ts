@@ -12,6 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { StockFormComponent } from './stock-form/stock-form.component';
 import { StockTableComponent } from './stock-table/stock-table.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { StockTableComponent } from './stock-table/stock-table.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent]
