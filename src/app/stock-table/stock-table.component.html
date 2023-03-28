@@ -29,18 +29,19 @@
                 <th>Status</th>
                 <th>Modify</th>
             </tr>
+            
         </thead>
         <!-- <tbody *ngIf="data; "> -->
         <tbody>
-            <tr class=" w-full bg-white border-b" >
-                <td class="pr-6 py-4  "> NSE </td>
-                <td class="pr-6 py-4"> 11 </td>
-                <td class="pr-6 py-4"> 12 </td>
-                <td class="pr-6 py-4"> 12 </td>
-                <td class="pr-6 py-4"> 1 </td>
-                <td class="pr-6 py-4"> high </td>
-                <td class="pr-6 py-4"> 10 </td>
-                <td class="pr-6 py-4"> 10 </td>
+            <tr *ngFor="let data of data" class=" w-full bg-white border-b" >
+                <td class="pr-6 py-4  "> {{data?.stock}} </td>
+                <td class="pr-6 py-4"> {{data.entryPrice}} </td>
+                <td class="pr-6 py-4"> {{data.targetPoint}} </td>
+                <td class="pr-6 py-4"> {{data.stopLoss}} </td>
+                <td class="pr-6 py-4"> {{data.quantity}} </td>
+                <td class="pr-6 py-4"> {{data.entryType}} </td>
+                <td class="pr-6 py-4"> {{data.tag}} </td>
+                <td class="pr-6 py-4"> "01-08-1992" </td>
                 <td class="pr-6 py-4"> sold </td>
                 <td class="pr-6 py-4"> no </td>
             </tr>

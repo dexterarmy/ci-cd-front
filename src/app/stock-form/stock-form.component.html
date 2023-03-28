@@ -8,7 +8,7 @@
     </div>
       <button type="button" class="absolute top-0 right-0 text-black bg-white-500  border-2 focus:bg-red-300  font-medium rounded-lg text-base p-2.5 px-4 text-center ">--></button>
     <div class="stock-form w-1/2 m-auto">
-        <form >
+        <form [formGroup]="stockForm" (ngSubmit)="stockSubmit()">
             <div class="stock-fields pt-40 pb-16 ">
             
               <div class="flex mb-4 justify-between ">
@@ -17,7 +17,7 @@
                   <span class="inline-flex items-center px-3 text-base text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
                     
                   </span>
-                  <input type="text" id="stock-name" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="NIFTY">
+                  <input formControlName="stock" type="text" id="stock-name" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="NIFTY">
                 </div>
               </div>
 
@@ -26,7 +26,7 @@
                 <div class="stock-input flex w-10/12">
                     <span class="inline-flex items-center px-3 text-base text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md "> </span>
 
-                    <select id="entry-type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  ">
+                    <select id="entry-type" formControlName="entryType" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  ">
                         <option selected>Entry at specific price</option>
                         <option value="US">United States</option>
                         <option value="CA">Canada</option>
@@ -42,7 +42,7 @@
                   <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
                     
                   </span>
-                  <input type="text" id="entry-price" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
+                  <input formControlName="entryPrice" type="text" id="entry-price" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
                 </div>
               </div>
             
@@ -52,7 +52,7 @@
                   <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
                     
                   </span>
-                  <input type="text" id="stop-loss" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
+                  <input formControlName="stopLoss" type="text" id="stop-loss" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
                 </div>
               </div>
             
@@ -62,7 +62,7 @@
                   <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
                     
                   </span>
-                  <input type="text" id="target-point" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
+                  <input formControlName="targetPoint" type="text" id="target-point" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
                </div>
               </div>
               
@@ -72,7 +72,7 @@
                   <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
                     
                   </span>
-                  <input type="text" id="quantity" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
+                  <input formControlName="quantity" type="text" id="quantity" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
                </div>
               </div>
 
@@ -81,7 +81,7 @@
                 <div class="stock-input flex w-10/12">
                     <span class="inline-flex items-center px-3 text-base text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md "> </span>
 
-                    <select id="tag" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  ">
+                    <select formControlName="tag" id="tag" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  ">
                         <option selected>Select tag</option>
                         <option value="US">United States</option>
                         <option value="CA">Canada</option>
@@ -97,11 +97,11 @@
                   <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
                     
                   </span>
-                  <input type="text" id="auto-square" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
+                  <input formControlName="autoSquare" type="text" id="auto-square" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5   " placeholder="">
                 </div>
               </div>
               <div class="stock-bottom-btns flex justify-center p-4 gap-2">
-                <button type="button" class="text-white bg-green-500  focus:ring-4   font-medium rounded-lg text-base p-2.5 px-4 text-center ">LE</button>
+                <button type="submit" class="text-white bg-green-500  focus:ring-4   font-medium rounded-lg text-base p-2.5 px-4 text-center ">LE</button>
                 <button type="button" class="text-white bg-red-500  focus:ring-4   font-medium rounded-lg text-base p-2.5 px-4 text-center ">LX</button>
                 <button type="button" class="text-white bg-red-500  focus:ring-4   font-medium rounded-lg text-base p-2.5 px-4 text-center ">SE</button>
                 <button type="button" class="text-white bg-green-500  focus:ring-4   font-medium rounded-lg text-base p-2.5 px-4 text-center ">SX</button>
@@ -110,6 +110,6 @@
         </form>
     </div>
     <div>
-      <app-stock-table></app-stock-table>
+      <app-stock-table [myEvent]="myEvent"></app-stock-table>
     </div>
 </div>
