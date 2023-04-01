@@ -24,12 +24,15 @@ export class StockTableComponent implements OnInit {
   @Input() myEvent : EventEmitter<any>;
 
   data:Array<stockObject>;
-  changingData:number;
+  changingData:number[];
 
   constructor(private stockService: StockServiceService, private socket: Socket){
-    this.socket.on('changingData', (data: number) => {
-      console.log(data);
-      this.changingData = data;
+    this.socket.on('changingData', (datas: number[]) => {
+      // this.changingData = datas;
+      // console.log(datas);
+      this.changingData = datas;
+      console.log(this.changingData)
+    
     });
 
     window.addEventListener('beforeunload', () => {

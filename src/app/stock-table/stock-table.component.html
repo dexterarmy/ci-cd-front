@@ -33,14 +33,14 @@
         </thead>
         <!-- <tbody *ngIf="data; "> -->
         <tbody>
-            <tr *ngFor="let data of data" class=" w-full bg-white border-b" >
+            <tr *ngFor="let data of data ; let i = index" class=" w-full bg-white border-b" >
                 <td class="pr-6 py-4  "> {{data?.stock}} </td>
                 <td class="pr-6 py-4"> {{data.entryPrice}} </td>
                 <td class="pr-6 py-4"> {{data.targetPoint}} </td>
                 <td class="pr-6 py-4"> {{data.stopLoss}} </td>
                 <td class="pr-6 py-4"> {{data.quantity}} </td>
                 <td class="pr-6 py-4"> {{data.entryType}} </td>
-                <td class="pr-6 py-4"> {{changingData}} </td>
+                <td class="pr-6 py-4"> {{changingData[i]}} </td>
                 <td class="pr-6 py-4"> "01-08-1992" </td>
                 <td class="pr-6 py-4"> sold </td>
                 <td class="pr-6 py-4"> no </td>
